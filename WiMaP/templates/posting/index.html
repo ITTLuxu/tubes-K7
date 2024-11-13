@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+   * {
+     box-sizing: border-box;
+   }
+   
+   body {
+     font-family: Arial, Helvetica, sans-serif;
+   }
+   
+   /* Style the header */
+   header {
+     background-color: #ffffff;
+     padding: 30px;
+     text-align: right;
+     font-size: 35px;
+     color: white;
+   }
+   
+   /* Create two columns/boxes that floats next to each other */
+   nav {
+     float: left;
+     text-align: left;
+     width: 800px;
+     height: 400px; /* only for demonstration, should be removed */
+     background: #ffe5c4;
+     padding: 50px;
+     padding-left: 90px;
+     border-top-right-radius: 50px;
+     border-bottom-right-radius: 50px;
+   }
+   
+   /* Style the list inside the menu */
+   nav ul {
+     list-style-type: none;
+     padding: 0;
+   }
+   
+   article {
+     float: right;
+     text-align: left;
+     padding: 20px;
+     width: 600px;
+     background-color: #ffffff;
+     height: 500px; /* only for demonstration, should be removed */
+   }
+   
+   /* Clear float the columns */
+   section {
+     content: "";
+     display: table;
+     clear: both;
+     text-align: right;
+   }
+   
+   /* Style the footer */
+   footer {
+     background-color: #ffffff;
+     padding: 10px;
+     text-align: center;
+     color: white;
+   }
+   
+   /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+   @media (max-width: 600px) {
+     nav, article {
+       width: 100%;
+       height: auto;
+     }
+   }
+   </style>
+   <section>
+      <nav style="padding-top: 30px;">
+         <h1 style="font-size:80px;">WiMaP </h1>
+         <p style="font-size:25px;">Temukan Keajaiban Kuliner dan Wisata Bersama Kami!</p>
+         <a href="{% url 'pilih' %}">
+         <img src="IMAGES\Screenshot 2024-11-08 104458.png" alt="LETSGO">
+         </a>
+      </nav>
+   </section>
+{% endblock %}
