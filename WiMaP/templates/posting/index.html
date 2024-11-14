@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <style>
@@ -75,9 +76,12 @@
       <nav style="padding-top: 30px;">
          <h1 style="font-size:80px;">WiMaP </h1>
          <p style="font-size:25px;">Temukan Keajaiban Kuliner dan Wisata Bersama Kami!</p>
-         <a href="{% url 'pilih' %}">
-         <img src="IMAGES\Screenshot 2024-11-08 104458.png" alt="LETSGO">
+         <nav style="background-color: rgb(255, 255, 149); height: 50px; width: 100px; padding: 0%; border-radius: 10px; text-align: center; padding-bottom: 10px;">
+          <a href="{% url 'pilih' %}">
+            <h2>Lets Go</h2>
          </a>
+         </nav>
       </nav>
+      <img src="{% static 'Logo.jpg' %}" alt="error">
    </section>
 {% endblock %}
